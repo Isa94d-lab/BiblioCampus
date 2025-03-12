@@ -76,4 +76,15 @@ CREATE TABLE IF NOT EXISTS devolucion (
 
 
 
+* MODELO CONCEPTUAL *
+<img src="https://github.com/user-attachments/assets/d93a7663-7931-427c-962d-458bb08fd8a3">
+
+* MODELO LOGICO *
+<img src= "https://github.com/user-attachments/assets/81f49b0a-8cbb-4e32-80e0-e22d38f60e7a">
+
+
+
+
+
+
 
