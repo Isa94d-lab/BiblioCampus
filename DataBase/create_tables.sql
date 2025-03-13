@@ -1,5 +1,3 @@
-# BiblioCampus
-
 CREATE DATABASE IF NOT EXISTS Bibliocampus;
 
 USE Bibliocampus;
@@ -82,72 +80,3 @@ CREATE TABLE IF NOT EXISTS transaccion (
     FOREIGN KEY (id_detallePrestamo) REFERENCES detallePrestamo(id),
     FOREIGN KEY (id_devolucion) REFERENCES devolucion(id)
 );
-
-
-
-* MODELO CONCEPTUAL *
-<img src="https://github.com/user-attachments/assets/870c3a06-7767-4791-9a56-6e79236540bf">
-
-* MODELO LOGICO *
-<img src= "https://github.com/user-attachments/assets/10abc68c-0bba-4669-afc5-c6e20f2fc925">
-
-
-## CONSULTAS
-
-Listar todos los libros disponibles:
-
-SELECT id, nombre
-from libros;
-
-Buscar libros por genero:
-
-SELECT nombre, genero 
-FROM libros where genero like 'accion'; 
-
-Obtener informacionde un libro por ISBN; 
-
-SELECT nombre, estado, genero 
-FROM libros where isbn in (2);
-
-Contar el numero de libros en la biblioteca:
-
-SELECT COUNT(*) as Totallibros
-FROM libros;
-
-Listar todos los autores:
-
-SELECT id, nombre, apellido, pais_origen 
-FROM autores;
-
-Buscar autores por nombre: 
-
-SELECT nombre, apellido, pais_origen 
-FROM autores where nombre like 'Isa%';
-
-Listar todas las ediciones de un libro:
-
-SELECT libros.name, edicionLibro.fecha from
-INNER JOIN libros on edicionLibro.id = libros.id_libro;
-
-Obtener libros prestados actualmente:
-
-SELECT nombre, genero 
-FROM libros where estado like 0;
-
-
-
-## Incerts Opcionales
-
-INSERT INTO libros(nombre, isbn, estado, genero) VALUES ('God Of War', 001, TRUE, 'accion');
-
-
-INTO autores(nombre, apellido, pais_origen) VALUES ('Isabella', 'Galvis', 'Colombia');
-
-
-
-
-
-
-
-
-
