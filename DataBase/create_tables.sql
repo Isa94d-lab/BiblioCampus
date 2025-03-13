@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS libros (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(25),
     isbn VARCHAR(20) UNIQUE,
-    estado VARCHAR(15),
+    estado BOOLEAN,
     genero VARCHAR(30)
 );
 
